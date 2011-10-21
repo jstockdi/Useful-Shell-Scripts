@@ -1,0 +1,5 @@
+#!/bin/sh
+# A one-line script to fetch GET requests and format them using xmllint
+#
+wget -O- -q "$1"  | xmllint --format -
+

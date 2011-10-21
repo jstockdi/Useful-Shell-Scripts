@@ -1,0 +1,4 @@
+#!/bin/sh
+# A short one-liner to fetch a GET request and pipe it to a json formatter
+# Requires installing simplejson.tool, which may be not as useful if you have a recent version of python
+wget -O- -q "$1"  | sed 's!\<\!--.*--\>!!g' | python -m simplejson.tool
