@@ -1,0 +1,2 @@
+NUM_CHARS=$1
+date +%s | shasum -a 256 | base64 | head -c $NUM_CHARS ; echo
